@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Compiled source
 *.com
 *.class
@@ -84,4 +82,3 @@ nosetests.xml
 npm/*.js
 setup/data/*.js
 
->>>>>>> a1f0b260cb74e69f1efad57da475b52b92108d0d
