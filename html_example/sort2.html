@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+
+<body onload="brython()">
+
+
+<script type="text/python">
+from browser import document as doc , window as win 
+from pyfram import sort_html
+
+def sorting1(ev):
+    sort_html("#myTable", ".item", 'td:nth-child(1)')
+
+def sorting2(ev):
+    sort_html('#myTable', ".item", 'td:nth-child(2)')
+
+doc['sorting2'].bind('click', sorting2)
+doc['sorting1'].bind('click', sorting1)
+
+</script>
+
+
+<h2>Sort List</h2>
+
+<p>Click the button to sort the list.</p>
+
+<table id="myTable" class="w3-table-all">
+    <tr>
+      <th id="sorting1" style="cursor:pointer">Name</th>
+      <th id="sorting2" style="cursor:pointer">Country</th>
+    </tr>
+    <tr class="item">
+      <td>Berglunds snabbköp</td>
+      <td>Sweden</td>
+    </tr>
+    <tr class="item">
+      <td>North/South</td>
+      <td>UK</td>
+    </tr>
+    <tr class="item">
+      <td>Alfreds Futterkiste</td>
+      <td>Germany</td>
+    </tr>
+    <tr class="item">
+      <td>Königlich Essen</td>
+      <td>Germany</td>
+    </tr>
+    <tr class="item">
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Italy</td>
+    </tr>
+    <tr class="item">
+      <td>Paris spécialités</td>
+      <td>France</td>
+    </tr>
+    <tr class="item">
+      <td>Island Trading</td>
+      <td>UK</td>
+    </tr>
+    <tr class="item">
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Canada</td>
+    </tr>
+  </table>
+  
+
+
+
+</body>
+
+</html>

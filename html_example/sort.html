@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+
+<body onload="brython()">
+
+
+<script type="text/python">
+from browser import document as doc , window as win 
+from pyfram import sort_html
+
+def sorting(ev):
+    sort_html("#id01", "li")
+
+doc['sorting'].bind('click', sorting)
+
+</script>
+
+
+
+<h2>Sort List</h2>
+
+<p>Click the button to sort the list.</p>
+<p><button id="sorting" class="w3-button w3-black">Sort</button></p>
+
+<ul id="id01" class="w3-ul w3-black">
+  <li>Oslo</li>
+  <li>Stockholm</li>
+  <li>Helsinki</li>
+  <li>Berlin</li>
+  <li>Rome</li>
+  <li>Madrid</li>
+</ul>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+<body class="w3-container" onload="brython()" >
+
+
+
+
+<script type="text/python">
+from browser import window as win, document as doc
+from pyfram import hide, show
+
+def hide_element(ev):
+    hide('#London')
+
+def show_element(ev):
+    show('#London')
+
+doc['hide'].bind("click", hide_element)
+doc['show'].bind("click", show_element)
+</script>
+
+
+
+<h2>Testing Hide Show function </h2>
+
+
+<p>
+        <button class="w3-button w3-blue" id="hide"  >Hide</button>
+        <button class="w3-button w3-blue"  id="show" >Show</button>
+        </p>
+
+
+<div id="London" class="w3-panel w3-blue">
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+      </div>
+      
+      <div id="Paris" class="w3-panel w3-blue">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p> 
+      </div>
+      
+      <div id="Tokyo" class="w3-panel w3-blue">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+
+
+
+
+
+</body>
+</html>

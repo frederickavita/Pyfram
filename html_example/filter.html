@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+<body class="w3-container" onload="brython()" >
+<script type="text/python" >
+from browser import document as doc, window as win 
+from pyfram import filter_html
+
+def filt(ev):
+    filter_html("#id01", 'li', 'inp')
+
+doc['inp'].bind("input", filt)
+
+</script>
+
+<h2>Filter List</h2>
+
+<p>Search for a name in the input field:</p>
+
+<input id="inp" class="w3-input w3-light-gray" placeholder="Search for names..">
+
+<ul id="id01" class="w3-ul w3-margin-top">
+  <li>Alfreds Futterkiste</li>
+  <li>Berglunds snabbköp</li>
+  <li>Centro comercial Moctezuma</li>
+  <li>Ernst Handel</li>
+  <li>FISSA Fabrica Inter. Salchichas S.A.</li>
+  <li>Galería del gastrónomo</li>
+  <li>Island Trading</li>
+  <li>Königlich Essen</li>
+  <li>Laughing Bacchus Wine Cellars</li>
+  <li>Magazzini Alimentari Riuniti</li>
+  <li>North/South</li>
+  <li>Paris spécialités</li>
+</ul>
+
+</body>
+
+</html>

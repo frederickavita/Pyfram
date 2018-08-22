@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+
+<script type="text/python">
+from browser import document as doc 
+from pyfram import search_attrib
+
+
+myObject = {"customers":[
+{"CustomerName":"Alfreds Futterkiste","Color":"w3-red"},
+{"CustomerName":"Ana Trujillo Emparedados y helados","Color":"w3-green"},
+{"CustomerName":"Antonio Moreno Taquer a","Color":"w3-blue"},
+{"CustomerName":"Around the Horn","Color":"w3-yellow"}
+]};
+
+
+search_attrib("id01", myObject)
+
+
+
+</script>
+
+
+
+
+<body onload="brython()">
+
+
+<table id="id01" class="w3-table-all">
+        <tr py-repeat="customers" class="{Color}">
+          <td>{CustomerName}</td>
+        </tr>
+      </table>
+
+
+
+
+
+
+</body>
+
+
+</html>

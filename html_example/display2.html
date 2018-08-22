@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+
+<script type="text/python">
+from browser import document as doc 
+from pyfram import search_attrib
+
+
+myObject= {"customers":[
+{"CustomerName":"Alfreds Futterkiste","checked":"false"},
+{"CustomerName":"Ana Trujillo Emparedados y helados","checked":"checked"},
+{"CustomerName":"Antonio Moreno Taquer a","checked":""},
+{"CustomerName":"Around the Horn","checked":""},
+{"CustomerName":"B's Beverages","checked":"checked"}
+]};
+
+
+search_attrib("id01", myObject)
+
+
+
+</script>
+
+
+
+
+<body onload="brython()">
+
+
+
+<table id="id01" class="w3-table-all w3-xlarge">
+        <tr py-repeat="customers">
+          <td><input type="checkbox" class="w3-check" {checked}></td>
+          <td>{CustomerName}</td>
+        </tr>
+      </table>
+      
+
+
+
+
+
+
+</body>
+
+
+</html>

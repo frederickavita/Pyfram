@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+<body class="w3-container" onload="brython()" >
+
+<script type="text/python">
+from browser import document as doc,window as win 
+from pyfram import add_style 
+
+def modif_style(ev):
+    add_style('#London','background-color','cyan')
+
+doc["style"].bind("click", modif_style)
+
+</script>
+
+        <h2>Testing  with CSS STYLE</h2>
+
+        <p>Click the button to add a red background color to id="London".</p>
+        
+        <p>
+        <button  id="style" >Add Style</button>
+        </p>
+        
+        <div id="London" class="w3-panel w3-border city">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+        
+        <div id="Paris" class="w3-panel w3-border city">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p> 
+        </div>
+        
+        <div id="Tokyo" class="w3-panel w3-border city">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+        
+
+
+
+
+
+</body>
+</html>

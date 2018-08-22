@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+
+<script type="text/python">
+from browser import document as doc 
+from pyfram import search_attrib
+
+
+myObject = {"cars": [
+{"liste": "Volvo"},
+{"liste": "Ford"},
+{"liste": "BMW"},
+{"liste": "Mercedes"}
+]}
+
+search_attrib("id01", myObject)
+
+
+
+</script>
+
+
+
+
+<body onload="brython()">
+<select id="id01" class=" w3-yellow">
+<option py-repeat="cars">{liste}</option>
+</select>
+      
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+<body class="w3-container" onload="brython()" >
+<script type="text/python" >
+from browser import document as doc, window as win 
+from pyfram import add_class, remove_class
+
+def clas_ad(ev):
+    add_class('#London','w3-red')
+
+def clas_re(ev):
+    remove_class('#London','w3-red')
+
+doc['add'].bind("click", clas_ad)
+doc['remove'].bind("click", clas_re)
+
+</script>
+
+
+
+        <h2>Testing add/remove class</h2>
+
+        <p>Click the button to remove the "w3-text-red" class from all h2 elements.</p>
+        
+        <p>
+        <button class="w3-button w3-red" id="remove" >Remove Class</button>
+        </p>
+        
+        <p><button class="w3-btn w3-green" id="add"  >Add Class</button></p>
+
+        <div id="London" class="w3-panel w3-border city w3-text-red">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+        
+        <div id="Paris" class="w3-panel w3-border city w3-text-red ">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p> 
+        </div>
+        
+        <div id="Tokyo" class="w3-panel w3-border city w3-text-red">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+        
+
+
+
+
+
+
+</body>
+
+</html>

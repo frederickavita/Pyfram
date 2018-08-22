@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+<body onload="brython(1)">
+
+
+
+
+
+
+
+<script type="text/python">
+from browser import alert, window as win
+from synchro import UrlRequest
+
+
+
+def mado(ev):
+    print(ev)
+
+def erroring(err):
+    if err:
+        alert(err)
+
+
+task = {"color": "red"}
+
+ert = {'Accept': 'application/json',
+      'Content-Type': 'application/json'}
+
+UrlRequest("http://127.0.0.1:8000/test/default/lse",
+            response_type="json",
+            method="POST",
+            header=ert,
+            on_error=erroring,
+            on_response=mado, body=task)
+
+
+
+
+
+
+</script>
+
+
+</body>
+

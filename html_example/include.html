@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+<body onload="brython()">
+<script type="text/python">
+from browser import document as doc 
+from pyfram import include
+
+include()
+
+
+</script>
+<div py-include-html="h1.html" ></div>
+
+<div py-include-html="content.html"></div> 
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

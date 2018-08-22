@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+
+<script type="text/python">
+from browser import document as doc 
+from pyfram import search_attrib, display_http
+
+
+
+def myfunction(myobject):
+    total = 0
+    cal = myobject['cd']
+    for x in cal:
+        total += float(x['price'])
+    myobject['total'] = total
+    search_attrib("id01", myobject)
+
+
+display_http("cd.json", myfunction)
+
+</script>
+
+<body onload="brython(1)">
+
+<table id="id01" class="w3-table-all">
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Price</th>
+    </tr>
+    <tr py-repeat="cd">
+      <td>{title}</td>
+      <td>{artist}</td>
+      <td>{price}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>{total}</td>
+      </tr>
+  </table>
+  
+
+
+</body>
+
+

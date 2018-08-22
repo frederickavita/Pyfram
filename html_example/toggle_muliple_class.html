@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+<script type="text/python">
+from browser import document as doc, window as win 
+from pyfram import toggle_class 
+
+def toggle(ev):
+    toggle_class('#London','w3-red','w3-green')
+
+
+doc['toggle'].bind("click", toggle)
+
+</script>
+
+
+
+<button class="w3-btn w3-red" id="toggle">Toggle Class</button>
+</p>
+<body class="w3-container" onload="brython()" >
+        <div id="London" class="w3-panel w3-red city">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+              </div>
+              
+              <div id="Paris" class="w3-panel w3-red city">
+                <h2>Paris</h2>
+                <p>Paris is the capital of France.</p> 
+              </div>
+              
+              <div id="Tokyo" class="w3-panel w3-red city">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

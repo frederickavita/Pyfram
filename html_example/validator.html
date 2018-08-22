@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8" >
+<title>Pyfram App</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+
+
+<body onload="brython(1)">
+
+
+
+
+
+
+
+<script type="text/python">
+from browser import alert, document as doc
+from validator import email  
+
+
+
+
+def valid(ev):
+    rt = email(doc['input1'].value, 
+          message_error="wrong email format",
+          message_valid="format it's ok")
+    if rt[0]:
+        alert("{a} for value {b}".format(a=rt[1], b=rt[2]))
+    else:
+        alert(rt[1])
+
+doc['button'].bind("click", valid)
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+
+
+<input id="input1"   placeholder="write" type="email">
+
+<button id='button' >validation</button>
